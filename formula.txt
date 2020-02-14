@@ -1,0 +1,13 @@
+1.
+If条件里最好只有一个变量，否则就用嵌套，要保证可读性
+例如
+if(cellFroId != rtdata->cellFroId)
+{
+  TRACE_ERROR(STR("cellSleepInterInd:The cell is invalid"));
+  return;//默认返回0
+}
+//加else多余，因为if语句有return，即跳出，不满足if条件的话就从本语句开始执行
+
+2.
+(char*)rtdata->data;
+rtdata->data是char的数组， (char*)表示字符串
